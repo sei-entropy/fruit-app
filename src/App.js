@@ -9,15 +9,23 @@ export default class App extends React.Component {
     // Initalize the Search Value to an Empty String
     this.state = {
       searchValue: 'Water',
+      fruitsToDisplay: this.props.fruits,
     };
   }
 
   handleSearchChange = (e) => {
     const textValue = e.target.value;
-    console.log('Box', textValue)
+
+    // Take the text box current value
+    // Filter the Fruits Array into a new Array
+
+    const filteredFruitList = this.props.fruits.filter(function(fruit) {
+      return fruit.toLowerCase().includes(textValue.toLowerCase());
+    });
 
     this.setState({
       searchValue: textValue,
+      fruitsToDisplay: filteredFruitList,
     });
   }
 
@@ -27,7 +35,7 @@ export default class App extends React.Component {
         <h1>Fruits</h1>
         <Search value={this.state.searchValue}
                 onChange={this.handleSearchChange} />
-        <ListContainer fruits={this.props.fruits} />
+        <ListContainer fruits={this.state.fruitsToDisplay} />
       </div>
     );
   }
