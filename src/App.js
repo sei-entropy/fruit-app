@@ -8,7 +8,7 @@ export default class App extends React.Component {
 
     // Initalize the Search Value to an Empty String
     this.state = {
-      searchValue: 'Water',
+      searchValue: '',
       fruitsToDisplay: this.props.fruits,
     };
   }

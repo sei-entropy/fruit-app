@@ -1,13 +1,15 @@
 Before Starting An App / App Structure:
 
 1. Components
-  - ~ App (Container)
-    - ~ Search
+  - X App (Container)
+    - X Search
     - X List (Container)
       - X Item(s)
 2. Props
-  - Fruits [Array]
+  - X Fruits [Array]
 3. State
+    - Search Value
+    - Filtered List of Fruits
 
 
 
