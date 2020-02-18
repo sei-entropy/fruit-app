@@ -1,0 +1,10 @@
+Before Starting An App / App Structure:
+
+1. Components
+  - ~ App (Container)
+    - Search
+    - ~ List (Container)
+      - ~ Item(s)
+2. Props
+  - Fruits [Array]
+3. State
